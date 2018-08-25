@@ -21,7 +21,7 @@ tbody
           - vin = s.amount
       if out > 0 && vin > 0
         td.info
-          - var amount = (out - vin) / 100000000
+          - var amount = (out - vin) / 100
           if amount < 0
             - amount = amount * -1
             | - #{amount.toFixed(8)}
@@ -31,9 +31,9 @@ tbody
             | #{amount.toFixed(8)}
       else if out > 0
         td.success
-          - var amount = out / 100000000
+          - var amount = out / 100
           | + #{amount.toFixed(8)}
       else
         td.danger
-          - var amount = vin / 100000000
+          - var amount = vin / 100
           | - #{amount.toFixed(8)}
